@@ -1,0 +1,107 @@
+:root {
+    --mainColor: #6999EB;
+    --mainColorLight: #798eea;
+    --mainColorDark: #05386B;
+    --mainColorDarker: #032445;
+    --secondaryColor: #4ACA85;
+    --secondaryColorDark: #379683;
+    --tertiaryColor: #FFD700;
+    --textColor: #EDF5E1;
+}
+
+.nav-container {
+    margin-top: 77px;
+    background-color: rgba(3, 36, 69, 0.99);
+    width: 300px;
+    height: 100vh;
+    float: right;
+    justify-content: right;
+
+
+    transition: 0.4s;
+
+    position: fixed;
+    right: 0px;
+}
+
+.nav-container-hidden{
+    margin-top: 77px;
+    transform: translateX(300px);
+    transition: 0.4s;
+
+    background-color: rgba(3, 36, 69, 0.99);
+    width: 300px;
+    height: 100vh;
+    float: right;
+    justify-content: right;
+    position: fixed;
+    right: 0px;
+}
+
+
+
+.nav-brand {
+    text-align: center;
+    color: var(--secondaryColor);
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-brand img {
+    padding: 1rem;
+    width: 100px;
+}
+
+.nav-upper {
+    padding: 10px 0 40px 0;
+    border-bottom-style: solid;
+    border-color: var(--secondaryColor);
+    border-width: 5px;
+}
+
+.nav-heading {
+    grid-template-columns: 2fr, 1fr;
+    grid-template-rows: 1fr;
+    height: 75px;
+}
+
+.list-container {
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.side-nav-list {
+    text-align: center;
+}
+
+.side-nav-list a{
+    display: block;
+    color: var(--textColor);
+    font-size: x-large;
+    font-weight: bold;
+
+
+    text-decoration: none;
+    padding: 25px 0px;
+}
+
+.side-nav-list a:hover{
+    color: var(--secondaryColor);
+    background-color: #02182d;
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-container{
+        transform: translateX(300px);
+        transition: 0.4s;
+    
+        background-color: rgba(3, 36, 69, 0.99);
+        width: 300px;
+        height: 100vh;
+        float: right;
+        justify-content: right;
+    }
+}

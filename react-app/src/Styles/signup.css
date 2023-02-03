@@ -1,0 +1,22 @@
+:root {
+    --mainColor: #6999EB;
+    --mainColorLight: #798eea;
+    --mainColorDark: #05386B;
+    --mainColorDarker: #032445;
+    --secondaryColor: #4ACA85;
+    --secondaryColorDark: #379683;
+    --tertiaryColor: #FFD700;
+    --textColor: #EDF5E1;
+}
+
+.login-redirect {
+    float: right;
+    margin-top: 15px;
+    color: var(--textColor);
+}
+
+.login-redirect:hover{
+    float: right;
+    margin-top: 15px;
+    color: var(--secondaryColor);
+}

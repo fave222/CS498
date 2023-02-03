@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+
+:root {
+    --mainColor: #6999EB;
+    --mainColorLight: #798eea;
+    --mainColorDark: #05386B;
+    --mainColorDarker: #032445;
+    --secondaryColor: #4ACA85;
+    --secondaryColorDark: #379683;
+    --tertiaryColor: #FFD700;
+    --textColor: #EDF5E1;
+
+    --graphBG: url('..\\Images\\stock-background-4608x3456.jpg')
+}
+
+
+.btn {
+    margin-left: 25px;
+    margin-right: 50px;
+    width: 100px;
+
+    color: var(--textColor);
+    font-size: 18px;
+    font-weight: bold;
+    background-color: var(--mainColorLight);
+
+    box-shadow: 1px 1px 20px var(--mainColor);
+}
+
+.btn:hover {
+    background-color: var(--secondaryColor);
+    box-shadow: 1px 1px 30px var(--secondaryColor);
+}
+
+.bg-mainColor {
+    background-color: rgba(5, 56, 107, 0.99);
+}
+
+.bg-secondaryColor {
+    background-color: var(--secondaryColor);
+}
+
+.Navbar .logo {
+    color: var(--textColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Navbar .logo img {
+    width: 5rem;
+    float: left;
+}
+
+.Navbar .logo h3 {
+    float: right;
+    padding-left: 1rem;
+    color: var(--secondaryColor);
+    font-family: 'Abril Fatface', cursive;
+    font-size: 40px;
+}
+
+.Navbar .login-button {
+    width: 4rem;
+}
+
+.Navbar .login-button img:hover{
+    filter: sepia(100%) hue-rotate(120deg) saturate(900%) brightness(250%) drop-shadow(0px 0px 20px var(--secondaryColor));
+    cursor: pointer;
+}
+
+.Navbar .login-button img {
+    width: 100%;
+    filter: invert(100%);
+    
+}
+
+.Navbar .navbar {
+    padding: 0 2rem 0 2rem;
+    margin-bottom: 77px;
+}
+
+.Navbar .navbar-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Navbar .navbar-nav a {
+    color: var(--textColor);
+    margin: 0 2rem;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.Navbar .navbar-nav a:hover {
+    color: var(--secondaryColor);
+    text-shadow: 0px 0px 30px var(--secondaryColor);
+}
+
+.Navbar .navbar-nav a.active {
+    color: var(--secondaryColor);
+}
+
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding: 0 2rem;
+    background-color: var(--mainColor);
+    color: var(--textColor);
+}
+
+header .nav-btn {
+    padding: 5px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--textColor);
+    visibility:  hidden;
+    opacity: 0;
+    font-size: 1.8rem
+}
+
+@media only screen and (max-width: 768px) {
+    .Navbar .login-button {
+        visibility: hidden;
+    }
+}
