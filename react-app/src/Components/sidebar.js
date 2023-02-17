@@ -24,16 +24,18 @@ function Sidebar(props) {
             </div>
             <div className="list-container">
                 <div className="side-nav-list">
+                    <div class="position-sticky">
 
-                    <Link to="/">Home</Link>
-                    <Link to="/login">Login</Link>
-                    <a href=""> Inbox </a>
-                    <a href=""> Dashboard </a>
-                    <a href=""> Balance </a>
-                    <a href=""> Investing </a>
-                    <a href=""> Seek Funds </a>
+                        <Link to="/">Home</Link>
+                        <Link to="/login">Login</Link>
+                        <a href=""> Inbox </a>
+                        <a href=""> Dashboard </a>
+                        <a href=""> Balance </a>
+                        <a href=""> Investing </a>
+                        <a href=""> Seek Funds </a>
+                        <a href=""> Settings </a> 
                     
-
+                    </div>
                 </div>
             </div>
 

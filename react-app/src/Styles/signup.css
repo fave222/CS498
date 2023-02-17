@@ -7,6 +7,7 @@
     --secondaryColorDark: #379683;
     --tertiaryColor: #FFD700;
     --textColor: #EDF5E1;
+    --errorColor: #c71f1f;
 }
 
 .login-redirect {

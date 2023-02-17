@@ -20,6 +20,7 @@
     --secondaryColorDark: #379683;
     --tertiaryColor: #FFD700;
     --textColor: #EDF5E1;
+    --errorColor: #c71f1f;
 
     --graphBG: url('..\\Images\\stock-background-4608x3456.jpg')
 }
