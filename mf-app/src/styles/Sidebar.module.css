@@ -1,16 +1,4 @@
-:root {
-    --mainColor: #6999EB;
-    --mainColorLight: #798eea;
-    --mainColorDark: #05386B;
-    --mainColorDarker: #032445;
-    --secondaryColor: #4ACA85;
-    --secondaryColorDark: #379683;
-    --tertiaryColor: #FFD700;
-    --textColor: #EDF5E1;
-}
-
-.nav-container {
-    margin-top: 96px;
+.navContainer {
     background-color: rgba(3, 36, 69, 0.99);
     width: 300px;
     height: 100vh;
@@ -24,8 +12,7 @@
     right: 0px;
 }
 
-.nav-container-hidden{
-    margin-top: 96px;
+.navContainerHidden{
     transform: translateX(300px);
     transition: 0.3s;
 
@@ -40,7 +27,7 @@
 
 
 
-.nav-brand {
+.navBrand {
     text-align: center;
     color: var(--secondaryColor);
     display: flex;
@@ -49,35 +36,36 @@
     align-items: center;
 }
 
-.nav-brand img {
+.navBrandImg {
     padding: 1rem;
     width: 100px;
 }
 
-.nav-upper {
+.navUpper {
     padding: 10px 0 40px 0;
-    border-bottom-style: solid;
-    border-color: var(--secondaryColor);
-    border-width: 5px;
+    margin: 10px 0;
+    
 }
 
-.nav-heading {
+.navHeading {
     grid-template-columns: 2fr, 1fr;
     grid-template-rows: 1fr;
     height: 75px;
 }
 
-.list-container {
+.listContainer {
+    border-top-style: solid;
+    border-color: var(--secondaryColor);
+    border-width: 5px;
     justify-content: center;
     align-items: center;
-    padding-top: 50px;
 }
 
-.side-nav-list {
+.sideNavList {
     text-align: center;
 }
 
-.side-nav-list a{
+.sideNavList a {
     display: block;
     color: var(--textColor);
     font-size: x-large;
@@ -88,13 +76,17 @@
     padding: 25px 0px;
 }
 
-.side-nav-list a:hover{
+.sideNavList a:hover{
     color: var(--secondaryColor);
     background-color: #02182d;
 }
 
+.topLink {
+    margin-top: 0;
+}
+
 @media only screen and (max-width: 768px) {
-    .nav-container{
+    .navContainer{
         transform: translateX(300px);
         transition: 0.4s;
     

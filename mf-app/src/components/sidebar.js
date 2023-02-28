@@ -1,30 +1,31 @@
 'use client';
 import ListGroup from "react-bootstrap/ListGroup";
-import logo from "../Images/cash-in-hand-icon.png";
-import login_svg from '../Images/profile-circle.svg';
+import logo from "../images/cash-in-hand-icon.png";
+import login_svg from '../images/profile-circle.svg';
 
 import Link from 'next/link';
+import Image from 'next/image';
 
-import "./../Styles/sidebar.css";
+import styles from '@/styles/Sidebar.module.css';
 
 function Sidebar(props) {
 
-    const computedClassName = props.showSideNav ? 'nav-container' : 'nav-container-hidden';
+    const computedClassName = props.showSideNav ? styles.navContainer : styles.navContainerHidden;
 
     return (
         <div className={computedClassName}>
-            <div className="nav-upper">
-                <div className="nav-heading">
-                    <div className="nav-brand">
-                        <img src={logo}/>
+            <div className={styles.navUpper}>
+                <div className={styles.navHeading}>
+                    <div className={styles.navBrand}>
+                        <Image src={logo} alt="Logo"/>
                         <h2>Profile</h2>
                     </div>
                 </div>
             </div>
-            <div className="list-container">
-                <div className="side-nav-list">
+            <div className={styles.listContainer}>
+                <div className={styles.sideNavList}>
 
-                    <Link href="/">Home</Link>
+                    <Link className={styles.topLink} href="/">Home</Link>
                     <Link href="/login">Login</Link>
                     <a href="#inbox"> Inbox </a>
                     <a href="#dashboard"> Dashboard </a>

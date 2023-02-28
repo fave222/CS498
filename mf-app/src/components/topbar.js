@@ -2,9 +2,9 @@
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import logo from '../Images/cash-in-hand-icon.png';
+import logo from '../images/cash-in-hand-icon.png';
 
-import login_svg from '../Images/profile-circle.svg';
+import login_svg from '../images/profile-circle.svg';
 
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -17,7 +17,7 @@ import Sidebar from './sidebar';
 
 import React from 'react';
 
-import "../Styles/navbar.css";
+import styles from '@/styles/Topbar.module.css';
 
 import Link from 'next/link';
 import Image from 'next/image';
@@ -25,7 +25,7 @@ import Image from 'next/image';
 
 
 
-class MyNavbar extends React.Component {
+class Topbar extends React.Component {
     constructor(props) {
         super(props);
         this.state = {showSideNav: false};
@@ -38,22 +38,22 @@ class MyNavbar extends React.Component {
 
     render() {
         return (
-            <div className="Navbar">
-                <Navbar bg="mainColor" variant="dark" expand="md" fixed="top">
+            <div className='Navbar'>
+                <Navbar className={styles.navContainer} bg="mainColor" variant="dark" expand="md" fixed="top">
 
 
-                        <div className="logo">
+                        <div className={styles.logo}>
                             <Image src={logo} alt="logo" />
                             <h3> Modern<br/>Funding </h3>
                         </div>
 
                         <Navbar.Toggle id="mobile-collapse-btn" aria-controls="basic-navbar-nav" />
-                        <Navbar.Collapse id="basic-navbar-nav">
+                        <Navbar.Collapse className={styles.middleNav} id="basic-navbar-nav">
                         <Nav className="m-auto">
-                            <Nav.Link href="#home">Home</Nav.Link>
+                            <Nav.Link className={styles.navLink} href="#home">Home</Nav.Link>
                             
                             <Link href="/sign-up">
-                                <Button id="sign-up-btn">Sign Up</Button>
+                                <Button className={styles.signUpBtn} id="sign-up-btn">Sign Up</Button>
                             </Link>
 
                             
@@ -62,10 +62,11 @@ class MyNavbar extends React.Component {
                         
                         </Navbar.Collapse>
 
-                        <div className="login-button" onClick={() => this.handleClick()}>
-                            <Image src={login_svg} alt="logo"/>
+                        <div className={styles.loginContainer}>
+                            <div className={styles.loginButton} onClick={() => this.handleClick()}>
+                                <Image src={login_svg} alt="logo"/>
+                            </div>
                         </div>
-
                 </Navbar>
 
 
@@ -77,7 +78,7 @@ class MyNavbar extends React.Component {
     }
 }
 
-export default MyNavbar;
+export default Topbar;
 
 
 
