@@ -5,7 +5,7 @@ import { FaEye } from "react-icons/fa";
 
 import { useRef, useState } from "react";
 
-import "../Styles/login.css";
+import styles from '@/styles/Login.module.css';
 
 function Login() {
     const usernameRef = useRef()
@@ -27,11 +27,11 @@ function Login() {
     }
 
     return (
-      <div className="login-container">
-        <div className="login-panel">
+      <div className={styles.loginContainer}>
+        <div className={styles.loginPanel}>
           <form onSubmit={handleSubmit}>
-            <h2 className="title">Website Name</h2>
-            <div className="input-group">
+            <h2 className={styles.title}>Website Name</h2>
+            <div className={styles.inputGroup}>
 
               <input type="text" 
                 id="username" 
@@ -42,7 +42,7 @@ function Login() {
 
             </div>
 
-            <div className="input-group">
+            <div className={styles.inputGroup}>
 
               <input 
                 type={showPassword ? 'text' : 'password'} 

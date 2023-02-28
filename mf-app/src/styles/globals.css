@@ -8,7 +8,7 @@
   --tertiaryColor: #FFD700;
   --textColor: #EDF5E1;
 
-  --graphBG: url('..\\Images\\stock-background-4608x3456.jpg')
+  --graphBG: url('../images/stock-background-4608x3456.jpg');
 
 
 
