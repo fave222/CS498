@@ -1,14 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+
 .loginContainer {
     display: flex;
     justify-content: center;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
 }
 
 
 .loginPanel {
     width: 400px;
-    margin-top: 200px;
     border: 5px solid #ccc;
     border-radius: 5px;
     box-shadow: 2px 2px 15px #ccc;
@@ -24,6 +29,7 @@
     color: var(--textColor);
     font-family: 'Abril Fatface', cursive;
     font-size: 50px;
+    text-shadow: 1px 1px 4px var(--buttonColor);
 }
 
 
@@ -48,6 +54,7 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 18px;
+    font-family: 'Lato', sans-serif;
 }
 
 .inputGroup i {
@@ -74,6 +81,7 @@
     cursor: pointer;
     font-weight: bold;
     font-size: larger;
+    font-family: 'Lato', sans-serif;
 }
 
 .border {

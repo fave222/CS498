@@ -30,7 +30,7 @@ function Login() {
       <div className={styles.loginContainer}>
         <div className={styles.loginPanel}>
           <form onSubmit={handleSubmit}>
-            <h2 className={styles.title}>Website Name</h2>
+            <h2 className={styles.title}>Modern Funding</h2>
             <div className={styles.inputGroup}>
 
               <input type="text" 
@@ -56,7 +56,7 @@ function Login() {
             <button id="login" type="submit">Log In</button>
           </form>
 
-          <div className="border"/>
+          <div className={styles.border}/>
 
           <p>Don't have an account?</p> 
           <button id="new-account" type="submit">Create new account</button>

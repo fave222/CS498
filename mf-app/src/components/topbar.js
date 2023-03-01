@@ -44,7 +44,7 @@ class Topbar extends React.Component {
 
                         <div className={styles.logo}>
                             <Image src={logo} alt="logo" />
-                            <h3> Modern<br/>Funding </h3>
+                            <h3> ModernFunding </h3>
                         </div>
 
                         <Navbar.Toggle id="mobile-collapse-btn" aria-controls="basic-navbar-nav" />
