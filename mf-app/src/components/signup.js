@@ -3,6 +3,7 @@ import { FaEye } from "react-icons/fa";
 import { useRef, useState } from "react";
 import Link from 'next/link';
 import { supabase } from './../lib/supabaseClient';
+import { useRouter } from 'next/router';
 
 
 
@@ -13,8 +14,9 @@ import styles from '@/styles/Login.module.css';
 
 
 function SignUp() {
-    const usernameRef = useRef()
-    const passwordRef = useRef()
+    const usernameRef = useRef();
+    const passwordRef = useRef();
+    const router = useRouter();
 
     const [showPassword, setShowPassword] = useState(false);
 
@@ -24,10 +26,12 @@ function SignUp() {
       console.log({
           username: usernameRef.current.value,
           password: passwordRef.current.value,
-      })
+      });
       
       const email = usernameRef.current.value;
       const password = passwordRef.current.value;
+
+      /* Uncomment to use Supabase DB
 
       let { data, error } = await supabase.auth.signUp({
         email: email,
@@ -37,8 +41,11 @@ function SignUp() {
       if (error) {
         console.error('Error creating account: ', error.message);
       }
-
       console.log(data);
+
+      */
+
+      router.push("/")
 
 
     }
