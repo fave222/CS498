@@ -36,7 +36,7 @@ function Login() {
               <input type="text" 
                 id="username" 
                 ref={usernameRef}
-                placeholder="Username"
+                placeholder="Example@email.com"
                 required
                 />
 
@@ -52,7 +52,7 @@ function Login() {
                 />
               <i onClick={togglePasswordVisibility} ><FaEye size={25}/></i>
             </div>
-            <a className="forgot-password" href="#forgot password">Forgot password?</a>
+            <a className={styles.forgotPassword} href="#forgot password">Forgot password?</a>
             <button id="login" type="submit">Log In</button>
           </form>
 

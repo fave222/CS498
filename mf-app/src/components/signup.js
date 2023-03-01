@@ -1,14 +1,16 @@
 import React from "react";
-
 import { FaEye } from "react-icons/fa";
-
 import { useRef, useState } from "react";
-
-import "../Styles/login.css";
-
-import "../Styles/signup.css";
-
 import Link from 'next/link';
+import { supabase } from './../lib/supabaseClient';
+
+
+
+
+import styles from '@/styles/Login.module.css';
+
+
+
 
 function SignUp() {
     const usernameRef = useRef()
@@ -16,13 +18,29 @@ function SignUp() {
 
     const [showPassword, setShowPassword] = useState(false);
 
-    function handleSubmit(event) {
+    async function handleSubmit(event) {
       event.preventDefault();
 
       console.log({
           username: usernameRef.current.value,
           password: passwordRef.current.value,
       })
+      
+      const email = usernameRef.current.value;
+      const password = passwordRef.current.value;
+
+      let { data, error } = await supabase.auth.signUp({
+        email: email,
+        password: password
+      });
+
+      if (error) {
+        console.error('Error creating account: ', error.message);
+      }
+
+      console.log(data);
+
+
     }
 
     function togglePasswordVisibility() {
@@ -30,22 +48,22 @@ function SignUp() {
     }
 
     return (
-      <div className="login-container">
-        <div className="login-panel">
+      <div className={styles.loginContainer}>
+        <div className={styles.loginPanel}>
           <form onSubmit={handleSubmit}>
-            <h2 className="title">Website Name</h2>
-            <div className="input-group">
+            <h2 className={styles.title}>Modern Funding</h2>
+            <div className={styles.inputGroup}>
 
               <input type="text" 
                 id="username" 
                 ref={usernameRef}
-                placeholder="Username"
+                placeholder="Example@email.com"
                 required
                 />
 
             </div>
 
-            <div className="input-group">
+            <div className={styles.inputGroup}>
 
               <input 
                 type={showPassword ? 'text' : 'password'} 
@@ -55,12 +73,12 @@ function SignUp() {
                 />
               <i onClick={togglePasswordVisibility} ><FaEye size={25}/></i>
             </div>
-            <a className="forgot-password" href="#forgot password">Forgot password?</a>
+            <a className={styles.forgotPassword} href="#forgot password">Forgot password?</a>
 
 
             <button id="new-account" type="submit">Create Account</button>
 
-            <Link className="login-redirect" to="/login">Already have an account?</Link>
+            <Link href="/login" className={styles.loginRedirect}>Already have an account?</Link>
           </form>
         </div>
       </div>
