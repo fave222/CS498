@@ -73,18 +73,19 @@ function SignUp() {
               <h2> Get started with your account. </h2>
             </div>
             
+            {/*            Email            */}
             <div className={styles.inputGroup}>
 
               <p>Email</p>
               <input type="text" 
-                id="username" 
+                id="email" 
                 ref={usernameRef}
                 placeholder="Example@email.com"
                 required
                 />
 
             </div>
-
+            {/*            Password            */}
             <div className={styles.inputGroup}>
               <p>Password</p>
               <input 
@@ -95,7 +96,8 @@ function SignUp() {
                 />
               <i onClick={togglePasswordVisibility} ><FaEye size={25}/></i>
             </div>
-            
+
+            {/*            Password            */}
             <div className={styles.inputGroup}>
               <p>Confirm Password</p>
               <input 
@@ -108,6 +110,70 @@ function SignUp() {
             </div>
 
 
+            {/*          First Name         */}
+            <div className={styles.inputGroup}>
+
+              <p>First Name</p>
+              <input type="text" 
+                id="username" 
+                ref={usernameRef}
+                placeholder="Example@email.com"
+                required
+                />
+
+            </div>
+
+            {/*          Last Name         */}
+            <div className={styles.inputGroup}>
+
+              <p>Last Name</p>
+              <input type="text" 
+                id="username" 
+                ref={usernameRef}
+                placeholder="Example@email.com"
+                required
+                />
+
+            </div>
+
+            {/*            Gender           */}
+            <div className={styles.inputGroup}>
+
+              <p>Gender</p>
+              <input type="text" 
+                id="username" 
+                ref={usernameRef}
+                placeholder="Example@email.com"
+                required
+                />
+
+            </div>
+
+            {/*            D.O.B            */}
+            <div className={styles.inputGroup}>
+
+              <p>Date of Birth</p>
+              <input type="text" 
+                id="username" 
+                ref={usernameRef}
+                placeholder="Example@email.com"
+                required
+                />
+
+            </div>
+
+            {/*        Account Type        */}
+            <div className={styles.inputGroup}>
+
+              <p>Account Type</p>
+              <input type="text" 
+                id="username" 
+                ref={usernameRef}
+                placeholder="Example@email.com"
+                required
+                />
+
+            </div>
 
 
             <button id="new-account" type="submit">Create Account</button>

@@ -26,6 +26,7 @@
     font-family: 'Abril Fatface', cursive;
     font-size: 70px;
     text-shadow: 1px 0px 1px var(--secondaryColor);
+    cursor: pointer;
 }
 
 .titleContainer {
@@ -42,19 +43,21 @@
 
 }
 
-.formContainer h2[id="welcome"] {
+.greeting h2[id="welcome"] {
     font-family: 'Playfair Display', serif;
     font-size: 4rem;
 }
 
-.formContainer h2 {
+.greeting h2 {
     font-family: 'Playfair Display', serif;
     font-size: xx-large;
+    font-weight: 500;
 
 }
 
 .greeting {
     margin-bottom: 3vh;
+    display: inline-block;
 }
 
 .formContainer p {
