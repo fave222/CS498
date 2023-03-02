@@ -4,12 +4,15 @@ import ReactDOM from 'react-dom/client';
 import { FaEye } from "react-icons/fa";
 
 import { useRef, useState } from "react";
+import { useRouter } from "next/router";
 
 import styles from '@/styles/Login.module.css';
 
 function Login() {
-    const usernameRef = useRef()
-    const passwordRef = useRef()
+    const usernameRef = useRef();
+    const passwordRef = useRef();
+
+    const router = useRouter();
 
     const [showPassword, setShowPassword] = useState(false);
 
@@ -59,7 +62,7 @@ function Login() {
           <div className={styles.border}/>
 
           <p>Don't have an account?</p> 
-          <button id="new-account" type="submit">Create new account</button>
+          <button id="new-account" type="submit" onClick={() => {router.push('/sign-up')}} >Create new account</button>
           
         </div>
       </div>

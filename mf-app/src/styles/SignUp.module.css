@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+
+
+.loginContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+}
+
+
+.signUpPanel {
+    width: 100vw;
+    box-shadow: 2px 2px 5px #ccc;
+    backdrop-filter: blur(10px);
+    background-color: ivory;
+    
+}
+  
+.title {
+    text-align: center;
+    color: var(--textColor);
+    font-family: 'Abril Fatface', cursive;
+    font-size: 70px;
+    text-shadow: 1px 0px 1px var(--secondaryColor);
+}
+
+.titleContainer {
+    background-color: var(--mainColorDarker);
+    height: 150px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    box-shadow: 0px 2px 10px var(--mainColorDarker);
+}
+
+.formContainer {
+    margin: 5% 25%;
+
+}
+
+.formContainer h2[id="welcome"] {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+}
+
+.formContainer h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: xx-large;
+
+}
+
+.greeting {
+    margin-bottom: 3vh;
+}
+
+.formContainer p {
+    font-family: 'Lato', sans-serif;
+    font-size: larger;
+}
+
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 1vh 0;
+}
+
+  
+.inputGroup label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--textColor);
+    font-size: larger;
+}
+  
+.inputGroup input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: 'Lato', sans-serif;
+    
+}
+
+.inputGroup input:focus {
+    outline: 2px solid var(--secondaryColor);
+    border: 1px solid var(--secondaryColor);
+}
+
+.inputGroup i {
+    position: absolute;
+    top: 55%;
+    right: 2%;
+
+}
+
+.inputGroup i:hover{
+    cursor: pointer;
+    color: var(--secondaryColorDark);
+}
+  
+.signUpPanel button[type="submit"] {
+    margin: 30px 0 50px;
+    width: 100%;
+    padding: 10px;
+    background-color: #55c2da;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: larger;
+    font-family: 'Lato', sans-serif;
+}
+
+.border {
+    background-color: #ccc;
+    height: 3px;
+    box-shadow: 1px 1px 6px #ccc;
+}
+
+.signUpPanel button[type="submit"]:hover{
+   background-color: var(--secondaryColor);
+   box-shadow: 1px 1px 30px var(--secondaryColor);
+}
+
+.signUpPanel p {
+    margin: 5px;
+    float: right;
+}
+
+.signUpPanel button#new-account[type="submit"] {
+    background-color: var(--secondaryColor);
+    margin-top: 40px;
+    margin-bottom: 5px;
+
+}
+
+.signUpPanel button#new-account[type="submit"]:hover {
+    background-color: var(--secondaryColorDark);
+    box-shadow: 1px 1px 30px var(--secondaryColorDark);
+}
+
+
+.forgotPassword {
+    float: right;
+    color: var(--textColor);
+}
+
+.forgotPassword:hover{
+    color: var(--secondaryColor);
+}
+
+.loginRedirect {
+    float: right;
+    margin-top: 15px;
+    color: var(--textColor);
+}
+
+.loginRedirect:hover{
+    float: right;
+    margin-top: 15px;
+    color: var(--secondaryColor);
+}
+
+

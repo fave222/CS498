@@ -17,34 +17,52 @@ import Sidebar from './sidebar';
 
 import React from 'react';
 
+import { useState, useEffect } from 'react';
+
 import styles from '@/styles/Topbar.module.css';
 
 import Link from 'next/link';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 
 
 
 
-class Topbar extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {showSideNav: false};
+export default function Topbar(props) {
+    // Initialize useStates
+    const [showSideNav, setShowSideNav] = useState(false)
+    const [isMobile, setIsMobile] = useState(false);
+
+    const router = useRouter();
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 960);
+        };
+        window.addEventListener('resize', handleResize);
+        handleResize();
+
+        return () => window.removeEventListener('resize', handleResize)
+
+    }, []);
+
+
+
+
+    // function to show or hide the side navbar.
+    function handleClick() {
+        setShowSideNav(!showSideNav);
     }
 
-
-    handleClick() {
-        this.setState({showSideNav: !this.state.showSideNav});
-    }
-
-    render() {
-        return (
+    // Component HTML
+    return (
             <div className='Navbar'>
                 <Navbar className={styles.navContainer} bg="mainColor" variant="dark" expand="md" fixed="top">
 
 
-                        <div className={styles.logo}>
+                        <div className={styles.logo} onClick={() => {router.push('/')}} >
                             <Image src={logo} alt="logo" />
-                            <h3> ModernFunding </h3>
+                            <h3> {isMobile ? 'MF' : 'ModernFunding'} </h3>
                         </div>
 
                         <Navbar.Toggle id="mobile-collapse-btn" aria-controls="basic-navbar-nav" />
@@ -63,7 +81,7 @@ class Topbar extends React.Component {
                         </Navbar.Collapse>
 
                         <div className={styles.loginContainer}>
-                            <div className={styles.loginButton} onClick={() => this.handleClick()}>
+                            <div className={styles.loginButton} onClick={() => handleClick()}>
                                 <Image src={login_svg} alt="logo"/>
                             </div>
                         </div>
@@ -71,14 +89,12 @@ class Topbar extends React.Component {
 
 
                 <Sidebar
-                    showSideNav={this.state.showSideNav}
+                    showSideNav={showSideNav}
                 />
             </div>
-        );
-    }
+    );
 }
 
-export default Topbar;
 
 
 

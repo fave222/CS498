@@ -36,17 +36,17 @@
     background-color: var(--mainColorDark);
     justify-content: center;
     display: flex;
-    height: 6vh;
-    min-height: 64px;
+    height: 64px;
     max-height: 96px;
 }
 
 .navContainer .logo {
-    color: var(--textColor);
     display: flex;
     justify-content: left;
     align-items: center;
     width: 20%;
+    position: sticky;
+    cursor: pointer;
 }
 
 .navContainer .logo img {
@@ -61,6 +61,7 @@
     color: var(--secondaryColor);
     font-family: 'Abril Fatface', cursive;
     font-size: 35px;
+    text-shadow: 1px 1px 4px var(--secondaryColorDark);
 }
 
 .loginContainer {
@@ -87,7 +88,7 @@
 
 .navLink {
     color: var(--textColor);
-    margin: 0 25%;
+    margin: 0;
     font-size: larger;
     text-shadow: 0px 0px 10px var(--mainColor);
     width: 150px;
@@ -108,5 +109,13 @@
 @media only screen and (max-width: 768px) {
     .Navbar .login-button {
         visibility: hidden;
+    }
+}
+
+
+@media only screen and (max-width: 960px) {
+    .navContainer .logo h3 {
+        font-size: 55px;
+        text-shadow: 2px 2px 3px var(--secondaryColorDark);
     }
 }

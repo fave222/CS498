@@ -19,7 +19,7 @@ export default function LoginPage() {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="icon" href={logo} />
         </Head>
-        <main className={styles.main}>
+        <main className={styles.homeMain}>
   
             <LoginModule/>
   

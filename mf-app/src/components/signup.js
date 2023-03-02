@@ -8,7 +8,7 @@ import { useRouter } from 'next/router';
 
 
 
-import styles from '@/styles/Login.module.css';
+import styles from '@/styles/SignUp.module.css';
 
 
 
@@ -16,6 +16,10 @@ import styles from '@/styles/Login.module.css';
 function SignUp() {
     const usernameRef = useRef();
     const passwordRef = useRef();
+    const confirmPasswordRef = useRef();
+
+
+
     const router = useRouter();
 
     const [showPassword, setShowPassword] = useState(false);
@@ -45,7 +49,7 @@ function SignUp() {
 
       */
 
-      router.push("/")
+      router.push("/");
 
 
     }
@@ -56,11 +60,22 @@ function SignUp() {
 
     return (
       <div className={styles.loginContainer}>
-        <div className={styles.loginPanel}>
-          <form onSubmit={handleSubmit}>
-            <h2 className={styles.title}>Modern Funding</h2>
+        <div className={styles.signUpPanel}>
+
+          <div className={styles.titleContainer}>
+            <h2 className={styles.title} onClick={() => {router.push('/');}} >Modern Funding</h2>
+          </div>
+
+          <form className={styles.formContainer} onSubmit={handleSubmit}>
+
+            <div className={styles.greeting}>
+              <h2 id="welcome"> Welcome new user! </h2>
+              <h2> Get started with your account. </h2>
+            </div>
+            
             <div className={styles.inputGroup}>
 
+              <p>Email</p>
               <input type="text" 
                 id="username" 
                 ref={usernameRef}
@@ -71,7 +86,7 @@ function SignUp() {
             </div>
 
             <div className={styles.inputGroup}>
-
+              <p>Password</p>
               <input 
                 type={showPassword ? 'text' : 'password'} 
                 id="password" ref={passwordRef}
@@ -80,7 +95,19 @@ function SignUp() {
                 />
               <i onClick={togglePasswordVisibility} ><FaEye size={25}/></i>
             </div>
-            <a className={styles.forgotPassword} href="#forgot password">Forgot password?</a>
+            
+            <div className={styles.inputGroup}>
+              <p>Confirm Password</p>
+              <input 
+                type={showPassword ? 'text' : 'password'} 
+                id="confirm-password" ref={confirmPasswordRef}
+                required
+                placeholder="Confirm Password"
+                />
+              <i onClick={togglePasswordVisibility} ><FaEye size={25}/></i>
+            </div>
+
+
 
 
             <button id="new-account" type="submit">Create Account</button>
