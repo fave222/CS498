@@ -9,4 +9,5 @@
 
 .signUpMain {
   min-height: 100vh;
+  background-image: var(--graphBG);
 }
