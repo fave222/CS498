@@ -45,7 +45,7 @@
 }
 
 .formContainer {
-    margin: 5% 20%;
+    margin: 5% 15%;
 
 }
 
@@ -76,7 +76,7 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    margin: 1vh 10% 0 0;
+    margin: 1vh 0;
 }
 
   
@@ -170,14 +170,12 @@
 }
 
 .loginRedirect {
-    float: right;
-    margin-top: 15px;
-    color: var(--textColor);
+    position: absolute;
+    font-size: larger;
+    bottom: 100px;
 }
 
 .loginRedirect:hover{
-    float: right;
-    margin-top: 15px;
     color: var(--secondaryColor);
 }
 
@@ -188,8 +186,18 @@
 }
 
 .doubleInput .inputGroup {
+    width: 50%;
     margin-right: 20px;
-    width: 43%;
+}
+
+.doubleInput .inputGroup[id='end'] {
+    margin-right: 0;
 }
 
 
+.inputContainer {
+    border: 2px solid var(--mainColorDark);
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px var(--mainColor);
+    padding: 25px;
+}

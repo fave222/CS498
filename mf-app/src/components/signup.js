@@ -48,8 +48,16 @@ function SignUp() {
 
       });
       
+
+      const firstName = firstNameRef.current.value;
+      const lastName = lastNameRef.current.value;
+      const username = usernameRef.current.value;
       const email = emailRef.current.value;
       const password = passwordRef.current.value;
+      const confirmPassword = confirmPasswordRef.current.value;
+      const phoneNum = phoneNum.current.value;
+      const DOB = dobRef.current.value;
+      const accountType = accountTypeRef.current.value;
 
       /* Uncomment to use Supabase DB
 
@@ -60,10 +68,32 @@ function SignUp() {
 
       if (error) {
         console.error('Error creating account: ', error.message);
+        return;
       }
       console.log(data);
 
       */
+
+      // Account creation successful
+      // Add user to Users Table here with unverified account, 
+      // change to verified once they verify email
+
+
+      const { data, error } = await supabase
+        .from('Users')
+        .insert([
+          { email: email, 
+            username: username,
+            first_name: firstName,
+            last_name: lastName,
+            phone_number: phoneNum,
+            dob: DOB,
+            account_type: accountType,
+            account_status: "unverified" },
+      ])
+
+
+
 
       router.push("/");
 
@@ -89,6 +119,8 @@ function SignUp() {
               <h2> Get started with your account. </h2>
             </div>
             
+            <div className={styles.inputContainer}>
+            
             <div className={styles.doubleInput}>
               
               <div className={styles.inputGroup}>
@@ -105,7 +137,7 @@ function SignUp() {
               </div>
 
               {/*          Last Name         */}
-              <div className={styles.inputGroup}>
+              <div className={styles.inputGroup} id="end" >
                 <label htmlFor="Last">Last Name*</label>
                 <input name="Last"
                   type="text" 
@@ -162,7 +194,7 @@ function SignUp() {
               </div>
 
               {/*      Confirm   Password     */}
-              <div className={styles.inputGroup}>
+              <div className={styles.inputGroup} id="end">
                 <label htmlFor="confirm-password">Confirm Password*</label>
                 <input name="confirm-password"
                   type={showPassword ? 'text' : 'password'} 
@@ -187,39 +219,44 @@ function SignUp() {
 
             </div>
 
-            {/*            D.O.B            */}
-            <div className={styles.inputGroup}>
+            <div className={styles.doubleInput}>
+              {/*            D.O.B            */}
+              <div className={styles.inputGroup}>
 
-              <label htmlFor="DOB">Date of birth*</label>
-              <input name="DOB"
-                type="date" 
-                id="username" 
-                ref={dobRef}
-                placeholder="Example@email.com"
-                required
-                />
+                <label htmlFor="DOB">Date of birth*</label>
+                <input name="DOB"
+                  type="date" 
+                  id="username" 
+                  ref={dobRef}
+                  placeholder="Example@email.com"
+                  required
+                  />
 
+              </div>
+
+
+              {/*        Account Type        */}
+              <div className={styles.inputGroup} id="end">
+
+                <label htmlFor="account-type">Account Type*</label>
+                <select id="account-type" name="account-type" ref={accountTypeRef}>
+                  <option value="investor">Investor</option>
+                  <option value="borrower">Borrower</option>
+                  <option value="both">Both</option>
+                  <option value="admin">Admin</option>
+                </select>
+
+              </div>
             </div>
 
-
-            {/*        Account Type        */}
-            <div className={styles.inputGroup}>
-
-              <label htmlFor="account-type">Account Type*</label>
-              <select id="account-type" name="account-type" ref={accountTypeRef}>
-                <option value="investor">Investor</option>
-                <option value="borrower">Borrower</option>
-                <option value="both">Both</option>
-                <option value="admin">Admin</option>
-              </select>
-
             </div>
-
-
+            <Link href="/login" className={styles.loginRedirect}>Already have an account?</Link>
             <button id="new-account" type="submit">Create Account</button>
 
-            <Link href="/login" className={styles.loginRedirect}>Already have an account?</Link>
+            
           </form>
+
+          
         </div>
       </div>
     );
