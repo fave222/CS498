@@ -1,0 +1,101 @@
+.navContainer {
+    background-color: rgba(3, 36, 69, 0.99);
+    width: 250px;
+    height: 100vh;
+    float: right;
+    justify-content: right;
+
+
+    transition: 0.3s;
+
+    position: fixed;
+    top: 64px;
+    right: 0px;
+}
+
+.navContainerHidden{
+    transform: translateX(300px);
+    transition: 0.3s;
+
+    background-color: rgba(3, 36, 69, 0.99);
+    width: 300px;
+    height: 100vh;
+    float: right;
+    justify-content: right;
+    position: fixed;
+    top: 64px;
+    right: 0px;
+}
+
+
+
+.navBrand {
+    text-align: center;
+    color: var(--secondaryColor);
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.navBrandImg {
+    padding: 1rem;
+    width: 100px;
+}
+
+.navUpper {
+    padding: 10px 0 40px 0;
+    margin: 10px 0;
+    
+}
+
+.navHeading {
+    grid-template-columns: 2fr, 1fr;
+    grid-template-rows: 1fr;
+    height: 75px;
+}
+
+.listContainer {
+    border-top-style: solid;
+    border-color: var(--secondaryColor);
+    border-width: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.sideNavList {
+    text-align: center;
+}
+
+.sideNavList a {
+    display: block;
+    color: var(--textColor);
+    font-size: x-large;
+    font-weight: bold;
+
+
+    text-decoration: none;
+    padding: 25px 0px;
+}
+
+.sideNavList a:hover{
+    color: var(--secondaryColor);
+    background-color: #02182d;
+}
+
+.topLink {
+    margin-top: 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .navContainer{
+        transform: translateX(300px);
+        transition: 0.4s;
+    
+        background-color: rgba(3, 36, 69, 0.99);
+        width: 300px;
+        height: 100vh;
+        float: right;
+        justify-content: right;
+    }
+}

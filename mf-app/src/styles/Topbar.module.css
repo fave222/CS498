@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+
+.signUpBtn {
+    margin-left: 25px;
+    margin-right: 25px;
+    width: 100px;
+
+    color: var(--textColor);
+    font-size: 18px;
+
+    box-shadow: 1px 1px 20px var(--mainColor);
+}
+
+.signUpBtn:hover {
+    background-color: var(--secondaryColor);
+    box-shadow: 1px 1px 30px var(--secondaryColor);
+    border: 1px solid var(--secondaryColor);
+}
+
+.bg-mainColor {
+    background-color: rgba(5, 56, 107, 0.99);
+}
+
+.bg-secondaryColor {
+    background-color: var(--secondaryColor);
+}
+
+.navContainer {
+    padding: 0 15px;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    background-color: var(--mainColorDark);
+    justify-content: center;
+    display: flex;
+    height: 64px;
+    max-height: 96px;
+}
+
+.navContainer .logo {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 20%;
+    position: sticky;
+    cursor: pointer;
+}
+
+.navContainer .logo img {
+    width: 64px;
+    height: 64px;
+    float: left;
+}
+
+.navContainer .logo h3 {
+    float: right;
+    padding-left: 1rem;
+    color: var(--secondaryColor);
+    font-family: 'Abril Fatface', cursive;
+    font-size: 35px;
+    text-shadow: 1px 1px 4px var(--secondaryColorDark);
+}
+
+.loginContainer {
+    width: 20%;
+}
+
+.loginButton {
+    margin-left: 100px;
+    max-height: 96px;
+    float: right;
+}
+
+.loginButton img:hover{
+    filter: sepia(100%) hue-rotate(120deg) saturate(900%) brightness(250%) drop-shadow(0px 0px 20px var(--secondaryColor));
+    cursor: pointer;
+}
+
+.loginButton img {
+    width: 64px;
+    filter: invert(100%) drop-shadow(0px 0px 20px var(--mainColor));
+    position: relative;
+    height: 64px;    
+}
+
+.navLink {
+    color: var(--textColor);
+    margin: 0;
+    font-size: larger;
+    text-shadow: 0px 0px 10px var(--mainColor);
+    width: 150px;
+}
+
+.navLink:hover {
+    color: var(--secondaryColor);
+    text-shadow: 0px 0px 10px var(--secondaryColor);
+}
+
+.middleNav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+    .Navbar .login-button {
+        visibility: hidden;
+    }
+}
+
+
+@media only screen and (max-width: 960px) {
+    .navContainer .logo h3 {
+        font-size: 55px;
+        text-shadow: 2px 2px 3px var(--secondaryColorDark);
+    }
+}
