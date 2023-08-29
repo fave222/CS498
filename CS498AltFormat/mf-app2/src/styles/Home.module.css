@@ -1,0 +1,28 @@
+.homeMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.signUpMain {
+    min-height: 100vh;
+    background-image: var(--graphBG);
+}
+
+.dashboardMain {
+  
+}
+
+.inboxMain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculatorMain {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    background-color: #032445;
+}

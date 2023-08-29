@@ -1,0 +1,246 @@
+.tableContainer {
+    
+}
+
+
+.container {
+
+}
+
+
+.dashboardTableContainer {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 1500px;
+}
+
+
+.dashTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 50px 50px 50px;
+    max-width: 100vw;
+    
+}
+
+.dashTableTitle {
+    margin-left: 50px;
+}
+
+
+.dashboardContainer {
+    margin-top: 77px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100vw;
+}
+
+.dashTopContainer {
+    width: 90%;
+    max-width: 1800px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+
+
+.dashTable th, .dashTable td {
+    border: 1px solid #ccc;
+    padding: 8px 16px;
+    text-align: left;
+}
+
+
+.dashTable th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+
+.dashTable tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+.showAmortButton, .trashButton {
+    width: 100%;
+}
+
+
+.trashButton:hover {
+    border: 1px solid red;
+    background-color: red;
+    box-shadow: 2px 2px 5px rgba(255, 0, 0, 0.6);
+}
+
+.showAmortButton:hover {
+    border: 1px solid #4ACA85;
+    background-color: #4ACA85;
+    box-shadow: 2px 2px 5px rgba(74, 202, 133, 0.6);
+}
+
+.trashButton {
+    border: 1px solid rgba(145, 22, 22, 0.8);
+    background-color: rgba(145, 22, 22, 0.8);
+}
+
+.input {
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+  
+.textarea {
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+}
+
+
+.dashboardHeader {
+    font-size: large;
+    margin-bottom: 2rem;
+}
+
+.button, .buttonRight{
+    background-color: #0275d8;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    height: 50px;
+    width: 180px;
+    align-self: flex-start;
+}
+
+.buttonRight {
+    float: right;
+    align-self: flex-end;
+}
+
+.button:hover, .buttonRight:hover, .emailButton:hover, .amortButton:hover {
+    background-color: #4ACA85;
+    box-shadow: 0 0 20px #4ACA85;
+    border: 1px solid #4ACA85;
+}
+
+
+
+
+.dashboardFormContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.dashFormContainer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 65%;
+    max-width: 900px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.dashFormHeader {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.closeIcon {
+    font-size: 28px;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 15px;
+}
+
+.closeIcon:hover {
+    color: red;
+}
+
+.composeTitle {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.doubleInput {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.doubleInput .inputGroup {
+    width: 50%;
+    margin-right: 20px;
+}
+
+.doubleInput .inputGroup[id='end'] {
+    margin-right: 0;
+}
+
+.doubleInput .inputGroup[id='single'] {
+    padding-right: 10px;
+    margin-right: 0;
+}
+
+
+.inputGroup {
+    margin-bottom: 20px;
+}
+
+
+.inputGroup textarea {
+    height: 10vh;
+}
+  
+.formContainer label {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-family: 'Lato', sans-serif;
+}
+  
+.inputGroup input, .inputGroup select, .inputGroup textarea{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Lato', sans-serif;
+    
+}
+
+.inputGroup input:focus, .inputGroup textarea:focus {
+    outline: 2px solid var(--secondaryColor);
+    border: 1px solid var(--secondaryColor);
+}
+
+.emailButton {
+    height: 44px;
+    width: 25%;
+    min-width: 140px;
+    margin-top: 20px;
+    float: right;
+}
+
+.amortButton {
+    height: 44px;
+    width: 50%;
+    min-width: 140px;
+    margin-top: 20px;
+    float: left;
+}

@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+
+.loginContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+}
+
+
+.loginPanel {
+    margin-top: 15vh;
+    width: 300px;
+    border: 5px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 2px 2px 15px #ccc;
+    padding: 30px;
+    backdrop-filter: blur(30px);
+    background-color: var(--mainColorDarker);
+    
+}
+  
+.title {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--textColor);
+    font-family: 'Abril Fatface', cursive;
+    font-size: 50px;
+    text-shadow: 1px 1px 4px var(--buttonColor);
+}
+
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 30px 0 5px 0;
+}
+
+  
+.inputGroup label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--textColor);
+    font-size: larger;
+}
+  
+.inputGroup input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: 'Lato', sans-serif;
+}
+
+.inputGroup i {
+    position: absolute;
+    top: 25%;
+    right: 5%;
+
+}
+
+.inputGroup i:hover{
+    cursor: pointer;
+    color: var(--secondaryColorDark);
+}
+  
+.loginPanel button[type="submit"] {
+    margin: 30px 0 50px;
+    width: 100%;
+    padding: 10px;
+    background-color: #55c2da;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: larger;
+    font-family: 'Lato', sans-serif;
+}
+
+.border {
+    background-color: #ccc;
+    height: 3px;
+    box-shadow: 1px 1px 6px #ccc;
+}
+
+.loginPanel button[type="submit"]:hover{
+   background-color: var(--secondaryColor);
+   box-shadow: 1px 1px 30px var(--secondaryColor);
+}
+
+.loginPanel p {
+    margin: 5px;
+    color: var(--textColor);
+    float: right;
+}
+
+.loginPanel button#new-account[type="submit"] {
+    background-color: var(--secondaryColor);
+    margin-top: 40px;
+    margin-bottom: 5px;
+
+}
+
+.loginPanel button#new-account[type="submit"]:hover {
+    background-color: var(--secondaryColorDark);
+    box-shadow: 1px 1px 30px var(--secondaryColorDark);
+}
+
+
+.forgotPassword {
+    float: right;
+    color: var(--textColor);
+}
+
+.forgotPassword:hover{
+    color: var(--secondaryColor);
+}
+
+.loginRedirect {
+    float: right;
+    margin-top: 15px;
+    color: var(--textColor);
+}
+
+.loginRedirect:hover{
+    float: right;
+    margin-top: 15px;
+    color: var(--secondaryColor);
+}
